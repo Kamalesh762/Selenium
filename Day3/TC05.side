@@ -1,0 +1,89 @@
+{
+  "id": "d6798a52-fca0-482d-b7b0-928d9dcf4f92",
+  "version": "2.0",
+  "name": "TC05",
+  "url": "https://demo.opencart.com",
+  "tests": [{
+    "id": "0f3eaced-cacd-4025-8797-29dbdace96e9",
+    "name": "TC05",
+    "commands": [{
+      "id": "8b3e2009-e47e-4dbd-be3e-244f0f01aa9f",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php?route=checkout/voucher&language",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "531668da-75e7-4db9-a132-b0b33b21868b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1516x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf636579-873b-4e62-b28c-f98213f7351f",
+      "comment": "",
+      "command": "click",
+      "target": "id=input-amount",
+      "targets": [
+        ["id=input-amount", "id"],
+        ["name=amount", "name"],
+        ["css=#input-amount", "css:finder"],
+        ["xpath=//input[@id='input-amount']", "xpath:attributes"],
+        ["xpath=//form[@id='form-voucher']/div[7]/div/input", "xpath:idRelative"],
+        ["xpath=//div[7]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2339f12-d338-432c-a0e9-6b919782b537",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=input-amount",
+      "targets": [
+        ["id=input-amount", "id"],
+        ["name=amount", "name"],
+        ["css=#input-amount", "css:finder"],
+        ["xpath=//input[@id='input-amount']", "xpath:attributes"],
+        ["xpath=//form[@id='form-voucher']/div[7]/div/input", "xpath:idRelative"],
+        ["xpath=//div[7]/div/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "fb145d20-58b7-4b58-98ec-c73f21042bea",
+      "comment": "",
+      "command": "click",
+      "target": "name=agree",
+      "targets": [
+        ["name=agree", "name"],
+        ["css=.form-check-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='agree']", "xpath:attributes"],
+        ["xpath=//form[@id='form-voucher']/div[8]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd03ea70-9e3d-463f-9a29-1ecd53a485f1",
+      "comment": "",
+      "command": "verifyChecked",
+      "target": "name=agree",
+      "targets": [
+        ["name=agree", "name"],
+        ["css=.form-check-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='agree']", "xpath:attributes"],
+        ["xpath=//form[@id='form-voucher']/div[8]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9d0b6b6b-35e0-47ba-8701-e23f9524e900",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0f3eaced-cacd-4025-8797-29dbdace96e9"]
+  }],
+  "urls": ["https://demo.opencart.com/"],
+  "plugins": []
+}

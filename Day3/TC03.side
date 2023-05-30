@@ -1,0 +1,78 @@
+{
+  "id": "62c353d0-c46a-4663-a90e-a8893fe8987f",
+  "version": "2.0",
+  "name": "TC03",
+  "url": "https://demo.opencart.com/",
+  "tests": [{
+    "id": "0c172021-66ef-42b7-a18b-dc40b4f7ddd9",
+    "name": "TC03",
+    "commands": [{
+      "id": "f2a17f1b-34a0-4f14-af8c-94996e854c3e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90045fbe-229e-4853-be4c-1740c9ff183a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1516x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3de7c763-fea5-4bbf-a11f-c3d2a523744e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Laptops & Notebooks",
+      "targets": [
+        ["linkText=Laptops & Notebooks", "linkText"],
+        ["css=.show:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Laptops & Notebooks')]", "xpath:link"],
+        ["xpath=//div[@id='narbar-menu']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://demo.opencart.com/index.php?route=product/category&language=en-gb&path=18')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Laptops & Notebooks')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "575f6439-9cce-42a4-917a-67ff77b9ee2b",
+      "comment": "",
+      "command": "storeTitle",
+      "target": "",
+      "targets": [],
+      "value": "value"
+    }, {
+      "id": "fb7049a2-d509-405d-8fe6-f4ea4d9f976a",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Your Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab7c0784-b2d7-4e1d-b71f-15c4bab9a2e8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "url"
+    }, {
+      "id": "0afd5092-3059-4164-b028-8e622ab13310",
+      "comment": "",
+      "command": "assert",
+      "target": "url",
+      "targets": [],
+      "value": "https://demo.opencart.com/"
+    }]
+  }],
+  "suites": [{
+    "id": "d4c0227b-8edb-4a3f-a5cf-fa567d67cccf",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0c172021-66ef-42b7-a18b-dc40b4f7ddd9"]
+  }],
+  "urls": ["https://demo.opencart.com/"],
+  "plugins": []
+}
